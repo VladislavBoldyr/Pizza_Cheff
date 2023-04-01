@@ -1,0 +1,49 @@
+<div class="wrapper">
+  <div class="header">
+    <div class="header-content">
+      <div class="logo">
+        <div class="logo-img">
+          <img src="./assets/img/pizza_logo.jpg" alt="pizza">
+        </div>
+        <p class="logo-name">pizza <br/> cheff</p>
+      </div>
+      <div class="header__burger" [ngClass]="{'active': isActive}"  (click)="onClickMenu()">
+        <span></span>
+      </div>
+      <nav class="header__menu">
+        <ul class="header__list">
+          <li>
+            <a class="header__link">Пиццы</a>
+          </li>
+          <li>
+            <a class="header__link">Напитки</a>
+          </li>
+          <li>
+            <a class="header__link">Доставка и оплата</a>
+          </li>
+          <li>
+            <a class="header__link">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="container">
+    <div class="content">
+      <div class="base-content">
+        <div class="base__info">
+          <div class="base__title">
+            <p class="title-part__first">Самая вкусная пицца в мире</p>
+            <p class="title-part__second">только в Pizza Cheff</p>
+          </div>
+          <div class="main-info">
+
+          </div>
+          <div class="select-pizza"></div>
+        </div>
+        <div class="main-pizza"></div>
+      </div>
+    </div>
+    <div class="footer"></div>
+  </div>
+</div>
