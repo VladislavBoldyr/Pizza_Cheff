@@ -4,4 +4,13 @@
   border: 0;
   box-sizing: border-box;
 }
-@font-face { font-family: 'Muller'; src: url(../font/MullerUltraLight.ttf); }
+
+*:focus {
+  outline: none;
+}
+@font-face { font-family: 'Muller-Regular'; src: url(../font/MullerRegular.ttf); }
+@font-face { font-family: 'Muller-Black'; src: url(../font/MullerBlack.ttf); }
+@font-face { font-family: 'Muller-UltraLight'; src: url(../font/MullerUltraLight.ttf); }
+@font-face { font-family: 'Muller-Bold'; src: url(../font/MullerBold.ttf); }
+@font-face { font-family: 'Muller-Extra-Bold'; src: url(../font/MullerExtraBold.ttf); }
+
