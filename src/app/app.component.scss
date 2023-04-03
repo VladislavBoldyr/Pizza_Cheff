@@ -6,14 +6,13 @@
 
 .container {
   margin: 0 auto;
-  padding: 0 10px;
-  width: 1205px;
+  width: 1150px;
   max-width: 100%;
 }
 
 .container-body {
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 160px 10px 0 10px;
   width: 1205px;
   max-width: 100%;
 }
@@ -32,6 +31,7 @@
     justify-content: space-between;
     align-items: center;
     height: 100px;
+    width: 850px;
   }
 }
 
@@ -85,19 +85,20 @@
 }
 
 .content {
-  margin-top: 130px;
   display: flex;
+  justify-content: center;
 }
 
-.base__title {
+.base-title {
   font-family: Muller-Extra-Bold;
   font-size: 45px;
   line-height: 55px;
   font-weight: 800;
   color: #b99150;
-}
-.title-part__second {
-  color: #ffaf18;
+  & p:last-child {
+    color: #ffaf18;
+
+  }
 }
 
 .main-pizza {
@@ -223,23 +224,7 @@
   margin-top: 15px;
 }
 
-.button {
-  background-color: #ffaf18;
-  cursor: pointer;
 
-  &:active {
-    transform: scale(0.98);
-    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
-  }
-
-  span {
-    font-size: 16px;
-    line-height: 55px;
-    color: #382400;
-    font-weight: bold;
-    font-family: Muller-Bold;
-  }
-}
 
 .footer {
   display: flex;
@@ -272,48 +257,6 @@
   }
 }
 
-.form {
-  display: flex;
-  margin-top: 50px;
-  margin-left: 20px;
-
-  .form-group {
-    display: grid;
-    row-gap: 24px;
-  }
-
-  .input {
-    width: 330px;
-    height: 60px;
-    border: 1px solid #b99150;
-    padding: 5px 0 5px 18px;
-
-    font-family: Muller-Regular;
-    font-size: 18px;
-    line-height: 45px;
-    font-weight: 400;
-    color: #cba86e;
-
-    &:focus {
-      border: 1px solid #b99150 !important;
-    }
-  }
-
-  input::placeholder {
-    font-family: Muller-Regular;
-    font-size: 18px;
-    line-height: 45px;
-    font-weight: 400;
-    color: #cba86e;
-  }
-
-  .button-order {
-    width: 330px;
-    height: 60px;
-    background-color: #ffaf18;
-  }
-}
-
 .slice-pizza {
   width: 410px;
   height: 454px;
@@ -322,6 +265,27 @@
   & img {
     max-width: 100%;
     display: block;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container-body {
+    max-width: none;
+    width: auto;//1050px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .container-body {
+    max-width: none;
+    width: auto;//900px;
+  }
+}
+
+@media (max-width: 900px) {
+  .container-body {
+    max-width: none;
+    width: auto;//750px;
   }
 }
 
@@ -387,7 +351,7 @@
   .header__menu{
     position: fixed;
     top: -100%;
-    left:0;
+    right:0;
     width: 200px;
     height: 500px;
     background-color: #fff;
@@ -406,7 +370,17 @@
   }
 
   .container-body {
-    width: 720px;
+    max-width: none;
+    width: auto;
+  }
+
+  .container {
+    max-width: none;
+    width: auto;
+  }
+
+  .header-container {
+    width: auto;
   }
 
   .main-pizza {

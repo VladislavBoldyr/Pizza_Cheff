@@ -1,0 +1,8 @@
+<fieldset class="form" [formGroup]="formGroup">
+  <div class="form-group">
+    <input class="input" placeholder="Ваше имя" type="text" formControlName="name" (keyup)="onKeyupName($event)">
+    <input class="input" placeholder="Адрес доставки" type="text" formControlName="address">
+    <input class="input" placeholder="Телефон" type="tel" formControlName="phone" (keyup)="onKeyupPhone($event)">
+    <button class="button button-order" [disabled]="formGroup.invalid" (click)="placeOrder()">Оформить заказ</button>
+  </div>
+</fieldset>

@@ -1,6 +1,7 @@
 <div class="wrapper">
   <header class="header">
-        <div class="container header-container">
+        <div class="container">
+          <div class="header-container">
           <div class="logo">
             <div class="logo-img">
               <img src="./assets/img/pizza_logo.jpg" alt="pizza">
@@ -26,18 +27,19 @@
               </li>
             </ul>
           </nav>
+          </div>
     </div>
   </header>
   <div class="container-body">
     <div class="content">
-        <div class="base__info">
-          <div class="base__title">
-            <p class="title-part__first">Самая вкусная пицца в мире</p>
-            <p class="title-part__second">только в Pizza Cheff</p>
+        <div>
+          <div class="base-title">
+            <p>Самая вкусная пицца в мире</p>
+            <p>только в Pizza Cheff</p>
           </div>
           <div class="main-info">
             <div class="info__item" *ngFor="let item of infoItems">
-              <div class="item__image"><img src="{{item.img}}"></div>
+              <div class="item__image"><img src="{{item.image}}"></div>
               <div class="item__description">
                 <div class="title">{{item.title}}</div>
                 <div class="item__text">{{item.text}}</div>
@@ -45,7 +47,7 @@
             </div>
           </div>
           <div class="select-pizza">
-            <button class="button button-select"><span>Выбрать пиццу</span></button>
+            <button class="button button-select">Выбрать пиццу</button>
           </div>
         </div>
         <div class="main-pizza">
@@ -55,13 +57,13 @@
     <div class="content-select-pizza">
       <div class="select-title">Выберите свою любимую пиццу</div>
       <div class="list-pizza" >
-        <div class="item" *ngFor="let item of listPizza$ | async">
+        <div class="item" *ngFor="let item of listPizza$ | async; let index = index">
           <div class="item__image">
-            <img src="{{item.img}}">
+            <img src="{{item.image}}" (click)="showLightbox(index)">
           </div>
           <div class="item__title">{{item.title}}</div>
           <div class="item__text">{{item.text}}</div>
-          <button class="button button-basket"><span>В корзину</span></button>
+          <button class="button button-basket">В корзину</button>
         </div>
       </div>
     </div>
@@ -73,17 +75,19 @@
         </div>
         <div class="slogan__text">Мы  гарантированно доставим вашу пиццу за 30 минут с момента оформления заказа. Если мы опоздаем даже на 1 минуту - вы получаете весь заказ бесплатно и ваучер на скидку на следующий заказ. Мы гордимся нашим сервисом и сделаем всё, чтобы наш клиент был доволен и не остался голодный!</div>
       </div>
-      <fieldset class="form">
-        <div class="form-group">
-          <input class="input" placeholder="Ваше имя">
-          <input class="input" placeholder="Адрес доставки">
-          <input class="input" placeholder="Телефон">
-          <button class="button button-order"><span>Оформить заказ</span></button>
-        </div>
-      </fieldset>
+      <app-order></app-order>
       <div class="slice-pizza">
         <img src="./assets/img/slice_pizza.jpg" alt="slice of pizza">
       </div>
     </div>
   </div>
 </div>
+
+<ng-image-fullscreen-view
+  [images]="imageObject"
+  [imageIndex]="selectedImageIndex"
+  [show]="showFlag"
+  (close)="closeEventHandler()">
+</ng-image-fullscreen-view>
+
+<lib-ng-toast></lib-ng-toast>
