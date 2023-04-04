@@ -1,3 +1,6 @@
+$colorTitle: #ffaf18;
+$colorText: #b99150;
+
 .wrapper {
   padding: 0 0 100px 0;
   display: flex;
@@ -94,9 +97,9 @@
   font-size: 45px;
   line-height: 55px;
   font-weight: 800;
-  color: #b99150;
+  color: $colorText;
   & p:last-child {
-    color: #ffaf18;
+    color: $colorTitle;
 
   }
 }
@@ -139,13 +142,13 @@
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 0.02em;
-      color: #ffaf18;
+      color: $colorTitle;
     }
     .item__text {
       font-size: 16px;
       letter-spacing: 0px;
       line-height: 16px;
-      color: #b99150;
+      color: $colorText;
       white-space: break-spaces;
       font-family: Muller Regular;
     }
@@ -190,6 +193,7 @@
       max-width: 240px;
       width: 214px;
       height: 155px;
+      cursor: pointer;
     }
     & img {
       max-width: 100%;
@@ -242,9 +246,9 @@
       font-size: 35px;
       line-height: 45px;
       font-weight: 800;
-      color: #ffaf18;
+      color: $colorTitle;
       & p:last-child {
-        color: #b99150;
+        color: $colorText;
       }
     }
     .slogan__text {
@@ -252,7 +256,7 @@
       font-size: 16px;
       line-height: 24px;
       font-weight: 400;
-      color: #b99150;
+      color: $colorText;
     }
   }
 }
@@ -271,21 +275,7 @@
 @media (max-width: 1200px) {
   .container-body {
     max-width: none;
-    width: auto;//1050px;
-  }
-}
-
-@media (max-width: 1050px) {
-  .container-body {
-    max-width: none;
-    width: auto;//900px;
-  }
-}
-
-@media (max-width: 900px) {
-  .container-body {
-    max-width: none;
-    width: auto;//750px;
+    width: auto;
   }
 }
 
