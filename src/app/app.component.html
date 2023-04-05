@@ -1,35 +1,36 @@
 <div class="wrapper">
   <header class="header">
-        <div class="container">
-          <div class="header-container">
-          <div class="logo">
-            <div class="logo-img">
-              <img src="./assets/img/pizza_logo.jpg" alt="pizza">
-            </div>
-            <p class="logo-name">pizza <br/> cheff</p>
+    <div class="container">
+      <div class="header-container">
+        <div class="logo">
+          <div class="logo-img">
+            <img src="./assets/img/pizza_logo.jpg" alt="pizza">
           </div>
-          <div class="header__burger" [ngClass]="{'active': isActive}"  (click)="onClickMenu()">
-            <span></span>
-          </div>
-          <nav class="header__menu" [ngClass]="{'active': isActive}">
-            <ul class="header__list">
-              <li>
-                <a class="header__link">Пиццы</a>
-              </li>
-              <li>
-                <a class="header__link">Напитки</a>
-              </li>
-              <li>
-                <a class="header__link">Доставка и оплата</a>
-              </li>
-              <li>
-                <a class="header__link">Контакты</a>
-              </li>
-            </ul>
-          </nav>
-          </div>
+          <p class="logo-name">pizza <br/> cheff</p>
+        </div>
+        <div class="header__burger" [ngClass]="{'active': isActive}"  (click)="onClickMenu()">
+          <span></span>
+        </div>
+        <nav class="header__menu" [ngClass]="{'active': isActive}">
+          <ul class="header__list">
+            <li>
+              <a class="header__link">Пиццы</a>
+            </li>
+            <li>
+              <a class="header__link">Напитки</a>
+            </li>
+            <li>
+              <a class="header__link">Доставка и оплата</a>
+            </li>
+            <li>
+              <a class="header__link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </header>
+  
   <div class="container-body">
     <div class="content">
         <div>
@@ -54,6 +55,7 @@
           <img src="./assets/img/pizza_big.jpg" alt="pizza_big">
         </div>
     </div>
+    
     <div class="content-select-pizza">
       <div class="select-title">Выберите свою любимую пиццу</div>
       <div class="list-pizza" >
@@ -67,6 +69,7 @@
         </div>
       </div>
     </div>
+    
     <div class="footer">
       <div class="slogan">
         <div class="slogan__title">
